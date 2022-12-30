@@ -5,12 +5,12 @@ import React, { useEffect, useState } from 'react';
 const MyTask = () => {
     const [tasks, setTastks] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/addtask')
+        fetch('https://daily-task-server-pink.vercel.app/addtask')
         .then(res=> res.json())
         .then(data=> setTastks(data))
     },[])
     const handleDelete = (_id)=>{
-        fetch(`http://localhost:5000/addtask/${_id}`,{
+        fetch(`https://daily-task-server-pink.vercel.app/addtask/${_id}`,{
             method:'DELETE',})
             .then(res=>res.json())
             .then(data=>{

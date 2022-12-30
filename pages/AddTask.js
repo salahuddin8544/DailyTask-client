@@ -15,7 +15,7 @@ const AddTask = () => {
           description: task
         }
         console.log(addeTask);
-        fetch('http://localhost:5000/addtask', {
+        fetch('https://daily-task-server-pink.vercel.app/addtask', {
           method:'POST',
           headers:{
             'content-type': 'application/json'
